@@ -1,10 +1,14 @@
 #paper {
-    width: 600px;
-    height: 700px;
-    position: relative;
-    margin: 20px auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: white;
-    box-shadow: 0px 0px 5px 0px #888;
+  flex: 50%;
+  position: relative;
+  margin: 20px auto;
+  padding-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 50px 0px #888;
+}
+
+.row {
+  display: flex;
 }
