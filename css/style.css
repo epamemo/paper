@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 
 #paper {
-  flex: 50%;
+  width: 600px;
+  height: 700px;
   position: relative;
   margin: 20px auto;
-  padding-left: 10px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: white;
-  box-shadow: 0px 0px 50px 0px #888;
-}
-
-.row {
-  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url(https://pixabay.com/get/57e4d34b425aaf14f6d1867dda35367b1c3addec5452784c_1920.jpg);
+  box-shadow: 0px 0px 5px 0px #888;
 }
 
 input {
@@ -22,4 +19,49 @@ input {
   letter-spacing: 1px;
   word-spacing: 5px;
   border: none !important;
+}
+
+#paper::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+#content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+input {
+  background: none !important;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  border: none !important;
+}
+
+#pesan {
+  background: none !important;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  border: none !important;
+  height: 500px;
+  width: 100%;
+}
+
+#content form {
+  text-align: right;
 }
