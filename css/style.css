@@ -28,7 +28,7 @@ input {
   position: absolute;
   top: 0;
   left: 40px;
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 #content {
@@ -42,7 +42,8 @@ input {
   word-spacing: 5px;
 }
 
-input {
+#pesan,
+#nama {
   background: none !important;
   font-family: "Dancing Script", cursive;
   font-size: 19px;
@@ -52,12 +53,6 @@ input {
 }
 
 #pesan {
-  background: none !important;
-  font-family: "Dancing Script", cursive;
-  font-size: 19px;
-  letter-spacing: 1px;
-  word-spacing: 5px;
-  border: none !important;
   height: 500px;
   width: 100%;
 }
