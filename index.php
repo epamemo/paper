@@ -7,6 +7,8 @@ if (isset($_POST['newMessage'])) {
     $pesan = $_POST['pesan'];
     $tanggal = $_POST['tanggal'];
     mysqli_query($mysqli, "INSERT INTO pesan VALUES('', '$nama', '$pesan', '$tanggal')");
+
+    header("location:thanks.html");
 }
 
 ?>
