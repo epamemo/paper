@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 
+.ilustrasi {
+  width: 100%;
+  opacity: 0.7;
+}
+
 #paper {
   width: 600px;
   height: 700px;
@@ -57,6 +62,6 @@ input {
   width: 100%;
 }
 
-#content form {
+#content .right-align {
   text-align: right;
 }
