@@ -23,20 +23,14 @@ while ($p = mysqli_fetch_array($pesan)) {
 <?php
 }
 ?>
-<nav>
-    <ul class="pagination justify-content-center">
-        <li class="page-item">
-            <a class="page-link" <?php if ($halaman > 1) {
-                                        echo "href='?halaman=$previous'";
-                                    } ?>>Previous</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" <?php if ($halaman < $total_halaman) {
-                                        echo "href='?halaman=$next'";
-                                    } ?>>Next</a>
-        </li>
-    </ul>
-</nav>
+<div>
+    <a class="page-link" <?php if ($halaman > 1) {
+                                echo "href='?halaman=$previous'";
+                            } ?>>Previous</a>
+    <a class="page-link" <?php if ($halaman < $total_halaman) {
+                                echo "href='?halaman=$next'";
+                            } ?>>Next</a>
+</div>
 <?php
 include 'footer.php';
 ?>
