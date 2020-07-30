@@ -7,7 +7,7 @@
 
 #paper {
   width: 600px;
-  height: 700px;
+  height: 80vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
@@ -58,7 +58,7 @@ input {
 }
 
 #pesan {
-  height: 500px;
+  height: 70%;
   width: 100%;
 }
 

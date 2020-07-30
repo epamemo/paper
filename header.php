@@ -11,6 +11,18 @@ if (isset($_POST['newMessage'])) {
     header("location:thanks.html");
 }
 
+$batas = 1;
+$halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
+$halaman_awal = ($halaman > 1) ? ($halaman * $batas) - $batas : 0;
+
+$previous = $halaman - 1;
+$next = $halaman + 1;
+$data = mysqli_query($mysqli, "select * from pesan");
+$jumlah_data = mysqli_num_rows($data);
+$total_halaman = ceil($jumlah_data / $batas);
+
+$pesan = mysqli_query($mysqli, "select * from pesan limit $halaman_awal, $batas");
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +36,14 @@ if (isset($_POST['newMessage'])) {
 </head>
 
 <body>
+<div>
+    <a class="page-link" <?php if ($halaman > 1) {
+                                echo "href='?halaman=$previous'";
+                            } ?>>Previous</a>
+    <a class="page-link" <?php if ($halaman < $total_halaman) {
+                                echo "href='?halaman=$next'";
+                            } ?>>Next</a>
+</div>
     <div id="paper">
         <div id="line">
             <div id="content">
