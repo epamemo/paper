@@ -36,13 +36,9 @@ $pesan = mysqli_query($mysqli, "select * from pesan limit $halaman_awal, $batas"
 </head>
 
 <body>
-<div>
-    <a class="page-link" <?php if ($halaman > 1) {
-                                echo "href='?halaman=$previous'";
-                            } ?>>Previous</a>
-    <a class="page-link" <?php if ($halaman < $total_halaman) {
-                                echo "href='?halaman=$next'";
-                            } ?>>Next</a>
+<div class="book">
+    <a id="prev_page_button" <?php if ($halaman > 1) {echo "href='?halaman=$previous'";}?>>Previous</a>
+    <a id="next_page_button" <?php if ($halaman < $total_halaman) {echo "href='?halaman=$next'";} ?>>Next</a>
 </div>
     <div id="paper">
         <div id="line">
